@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Haustier bearbeiten</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class ="container">
+    <h2>Haustier bearbeiten</h2>
+    <form th:action="@{/haustier/edit/{id}(id=${haustier.id})}"
+          th:object="${haustier}" method="post">
+        <input type="text" th:field="*{name}" class="form-control" placeholder="Name">
+        <input type="text" th:field="*{art}" class="form-control" placeholder="Art">
+        <input type="text" th:field="*{besitzerName}" class="form-control" placeholder="Besitzer">
+        Termin: <input type="date" th:field="*{appointment}" class="form-control">
+        <input type="submit" class="form-control" value="Speichern">
+    </form>
+    <a th:href="@{/haustier/list}">Zurück zur Liste</a>
+</div>
+</body>
+</html>

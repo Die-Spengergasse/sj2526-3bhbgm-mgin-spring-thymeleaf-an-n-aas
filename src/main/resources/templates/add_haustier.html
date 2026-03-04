@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Haustier hinzufügen</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Neues Haustier hinzufügen</h2>
+    <table class="table table-striped">
+        <form th:action="@{/haustier/add}" th:object="${haustier}" method="post">
+            <label>Name des Tieres</label>
+            <input type="text" th:field="*{name}" class="form-control">
+            <label>Tierart</label>
+            <input type="text" th:field="*{art}" class="form-control">
+            <label>Name des Besitzers</label>
+            <input type="text" th:field="*{besitzerName}" class="form-control">
+            <label>Termin</label>
+            <input type="date" th:field="*{appointment}" class="form-control">
+            <input type="submit" class="form-control" value="Speichern" style="background-color: #fab6f0">
+        </form>
+    </table>
+</div>
+</body>
+</html>

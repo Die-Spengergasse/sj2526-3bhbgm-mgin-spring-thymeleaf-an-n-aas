@@ -7,11 +7,14 @@
 </head>
 <body>
 <div class="container">
-    <h1>Hallo</h1>
+    <h1>Hier ist deine Haustierarztverwaltung!</h1>
+    <h7> Zum speichern, hinzufügen, aktualisieren und löschen von Haustieren</h7>
     Datum: <span th:text="${today}"></span>
-    <div>
-        <a href="/patient/list">patient list</a>
-    </div>
+
+
+     <a href="/haustier/list">haustier list</a>
+      <!--   <a th: href="@{/haustier/list">Haustier List</a> -->
+
 </div>
 </body>
 </html>

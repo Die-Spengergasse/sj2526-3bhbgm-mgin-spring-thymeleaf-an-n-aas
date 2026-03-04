@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Haustierliste</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Alle Haustiere</h2>
+    <!-- Tabelle mit Haustier infos -->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Art</th>
+            <th>Besitzer-ID</th>
+            <th>Appointment</th>
+            <th>Aktion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- zeigt informationen von haustieren an -->
+        <tr th:each="h : ${haustieres}">
+            <td th:text="${h.id}"></td>
+            <td th:text="${h.name}"></td>
+            <td th:text="${h.art}"></td>
+            <td th:text="${h.besitzerName}"></td>
+            <td th:text="${h.appointment}"></td>
+            <td>
+                <a th:href="@{/haustier/edit/{id}(id=${h.id})}">Bearbeiten</a>
+                <a th:href="@{/haustier/delete/{id}(id=${h.id})}">Löschen</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/haustier/add}">Neues Haustier</a>
+</div>
+</body>
+</html>

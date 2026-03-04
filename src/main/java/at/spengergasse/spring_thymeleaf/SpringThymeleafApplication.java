@@ -10,7 +10,8 @@ public class SpringThymeleafApplication {
         SpringApplication.run(SpringThymeleafApplication.class, args);
     }
 
-
+// doppelt welche methode wird aufgerufen wenn locakhost:8080 patient/list aufgerufen wird?
+// --> die methode patients in der klasse patientcontroller
     /*
     * spring application macht automatisch
     * webserver auf port 8080 starten

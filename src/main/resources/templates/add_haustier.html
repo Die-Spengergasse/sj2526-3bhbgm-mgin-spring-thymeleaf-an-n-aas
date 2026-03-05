@@ -9,7 +9,9 @@
 <div class="container">
     <h2>Neues Haustier hinzufügen</h2>
     <table class="table table-striped">
+        <!-- fügt das haustier zur liste hinzu -->
         <form th:action="@{/haustier/add}" th:object="${haustier}" method="post">
+            <!-- macht mit label einen textfeld und darunter mit th: tablehead ein textfeld damit man einen text reinschrieben kann -->
             <label>Name des Tieres</label>
             <input type="text" th:field="*{name}" class="form-control">
             <label>Tierart</label>
@@ -18,6 +20,7 @@
             <input type="text" th:field="*{besitzerName}" class="form-control">
             <label>Termin</label>
             <input type="date" th:field="*{appointment}" class="form-control">
+            <!-- fügt einen submit button hinzu damit man die daten speichern kann -->
             <input type="submit" class="form-control" value="Speichern" style="background-color: #fab6f0">
         </form>
     </table>

@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Entity
 public class Haustier {
 
-
+// macht get und set für alle eigenschaften
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <h2>Alle Haustiere</h2>
-    <!-- Tabelle mit Haustier infos -->
+    <!-- basis Tabelle mit Haustier infos -->
     <table class="table table-striped">
         <thead>
         <tr>
@@ -29,6 +29,7 @@
             <td th:text="${h.besitzerName}"></td>
             <td th:text="${h.appointment}"></td>
             <td>
+                <!-- fügt links ein die zu den edit und delete seiten führen -->
                 <a th:href="@{/haustier/edit/{id}(id=${h.id})}">Bearbeiten</a>
                 <a th:href="@{/haustier/delete/{id}(id=${h.id})}">Löschen</a>
             </td>

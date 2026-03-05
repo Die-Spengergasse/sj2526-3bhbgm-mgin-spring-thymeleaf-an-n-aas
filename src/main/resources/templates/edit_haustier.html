@@ -9,6 +9,7 @@
 <body>
 <div class ="container">
     <h2>Haustier bearbeiten</h2>
+    <!-- fügt die daten ein -->
     <form th:action="@{/haustier/edit/{id}(id=${haustier.id})}"
           th:object="${haustier}" method="post">
         <input type="text" th:field="*{name}" class="form-control" placeholder="Name">
@@ -17,6 +18,7 @@
         Termin: <input type="date" th:field="*{appointment}" class="form-control">
         <input type="submit" class="form-control" value="Speichern">
     </form>
+    <!-- fügt einen link hinzu damit man zurück zur liste kann -->
     <a th:href="@{/haustier/list}">Zurück zur Liste</a>
 </div>
 </body>
